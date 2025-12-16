@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DTDDDTJD2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5DTDDDTJD2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Resume - Jang Won Seo</title>
+    <meta name="description" content="Principal Digital Design Engineer specializing in DDR PHY & Memory Controller Architecture.">
+    <meta name="keywords" content="Jang Won Seo, Resume, Digital Design Engineer, DDR PHY, LPDDR5X, ASIC, Semiconductor, ISO26262">
+    <meta name="author" content="Jang Won Seo">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zionseo81.github.io">
+    <meta property="og:title" content="Resume: Jang-Won Seo">
+    <meta property="og:description" content="Principal Digital Design Engineer | High-Speed Memory Interface Architect">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zionseo81.github.io">
+    <meta property="twitter:title" content="Resume: Jang-Won Seo">
+    <meta property="twitter:description" content="Principal Digital Design Engineer | High-Speed Memory Interface Architect">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #555555;
+            --text-muted: #666666;
+            --text-accent: #2c3e50;
+            --border-color: #dddddd;
+            --link-color: #0077b5;
+            --role-focus-color: #777777;
+            --btn-bg: #f0f0f0;
+            --btn-text: #333333;
+            --btn-border: #cccccc;
+            --quote-bg: #f9f9f9;
+            --quote-border: #2c3e50;
+            --table-header-bg: #f4f4f4;
+        }
+
+        body.dark-mode {
+            --bg-color: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --text-muted: #888888;
+            --text-accent: #ecf0f1;
+            --border-color: #444444;
+            --link-color: #58a6ff;
+            --role-focus-color: #999999;
+            --btn-bg: #333333;
+            --btn-text: #eeeeee;
+            --btn-border: #555555;
+            --quote-bg: #2a2a2a;
+            --quote-border: #ecf0f1;
+            --table-header-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Controls */
+        .controls-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .control-btn {
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: 1px solid var(--btn-border);
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            min-width: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .control-btn:hover { opacity: 0.8; }
+        .btn-pdf { border-color: var(--text-accent); color: var(--text-accent); }
+
+        /* Language Toggle Logic */
+        .lang-kr { display: none; }
+        .lang-en { display: block; }
+        body.show-kr .lang-kr { display: block; }
+        body.show-kr .lang-en { display: none; }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--text-accent);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-accent);
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover { text-decoration: underline; }
+        .contact-info span.separator { margin: 0 10px; color: var(--border-color); }
+
+        /* General Typography */
+        section { margin-bottom: 40px; }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-accent);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 5px 0;
+        }
+
+        /* Philosophy Section Styling */
+        .philosophy-block {
+            background-color: var(--quote-bg);
+            border-left: 4px solid var(--quote-border);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+
+        .philosophy-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-accent);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .philosophy-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+
+        .philosophy-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 0;
+        }
+        
+        .philosophy-list strong {
+            color: var(--text-accent);
+        }
+
+        /* Skills Table Styling */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .skills-table th, .skills-table td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .skills-table th {
+            width: 30%;
+            background-color: var(--table-header-bg);
+            color: var(--text-accent);
+            font-weight: 700;
+        }
+        
+        .skills-table td {
+            color: var(--text-primary);
+        }
+
+        /* Job Entry Styling */
+        .job-entry { margin-bottom: 25px; }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-weight: 700;
+            font-size: 17px;
+            color: var(--text-primary);
+        }
+
+        .location {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-left: 5px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .role {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 3px;
+        }
+
+        .role-focus {
+            font-size: 13px;
+            color: var(--role-focus-color);
+            font-style: italic;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        ul { margin: 5px 0; padding-left: 20px; }
+
+        li {
+            font-size: 14.5px;
+            margin-bottom: 8px;
+            text-align: justify;
+            color: var(--text-primary);
+        }
+        
+        strong { font-weight: 700; color: var(--text-primary); }
+
+        .summary-text {
+            font-size: 14.5px;
+            text-align: justify;
+            color: var(--text-primary);
+        }
+
+        /* Footer for Last Updated */
+        .footer-updated {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        /* Print Specifics */
+        @media print {
+            .controls-container { display: none !important; }
+            body { 
+                background-color: #fff !important; 
+                color: #000 !important; 
+                max-width: 100%; 
+                padding: 0;
+                margin: 0; 
+            }
+            .philosophy-block { background-color: transparent !important; border-left: 2px solid #000 !important; }
+            .skills-table th { background-color: #eee !important; -webkit-print-color-adjust: exact; }
+            .footer-updated { display: none; }
+            a { text-decoration: none; color: #000 !important; }
+            @page { margin: 1.5cm; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls-container">
+        <button id="btn-lang" class="control-btn" title="Switch Language">KR/EN</button>
+        <button id="btn-theme" class="control-btn" title="Switch Theme">🌓</button>
+        <button class="control-btn btn-pdf" onclick="window.print()" title="Print to PDF">PDF</button>
+    </div>
+
+    <header>
+        <h1 class="lang-en">Jang Won Seo</h1>
+        <h1 class="lang-kr">서 장 원</h1>
+
+        <div class="subtitle lang-en">Principal Digital Design Engineer | High-Speed Memory Interface Architect</div>
+        <div class="subtitle lang-kr">수석 디지털 설계 엔지니어 | 고속 메모리 인터페이스 아키텍트</div>
+
+        <div class="contact-info">
+            <span class="lang-en">Seoul, Republic of Korea</span>
+            <span class="lang-kr">대한민국 서울</span>
+            <span class="separator">|</span>
+            <a href="mailto:whitesjw21@gmail.com">whitesjw21@gmail.com</a>
+            <span class="separator">|</span>
+            <a href="https://www.linkedin.com/in/zionseo81/" target="_blank">linkedin.com/in/zionseo81</a>
+        </div>
+    </header>
+
+    <div class="lang-en">
+        <section>
+            <h2>Engineering Philosophy</h2>
+            <div class="philosophy-block">
+                <span class="philosophy-title">"Complexity is the Enemy of Reliability"</span>
+                <p>In the world of nanometer-scale semiconductors, I embrace <strong>Architectural Essentialism</strong>—the belief that true robustness stems from eliminating the non-essential.</p>
+                <ul class="philosophy-list">
+                    <li><strong>Minimalism for Safety:</strong> Overly complex "combo" designs introduce latent failure modes.<br>I advocate for clean architectures where each module serves a clear purpose, ensuring the deterministic behavior required for <strong>ISO26262 (ASIL)</strong> compliance.</li>
+                    <li><strong>Silicon-Aware Design:</strong> Code ultimately manifests as electrical signals, and Mixed-Signal IPs cannot be fully validated through simulation alone.<br>I design Digital Logic that deeply understands and complements Analog characteristics, which I believe is essential for creating robust, production-ready IPs.</li>
+                    <li><strong>Optimization Through Subtraction:</strong> The most efficient low-power design doesn't come from adding features—it comes from removing unnecessary overhead.<br>By eliminating architectural inefficiencies, I achieve power efficiency without compromising performance.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="summary-text">
+                <strong>Strategic Principal Digital Design Engineer</strong> with <strong>14+ years of expertise</strong> in translating complex system requirements into high-performance silicon solutions (5nm LPDDR5X/4X).<br>
+                <strong>Proven ability to solve technical challenges and drive engineering innovations</strong> that optimize Performance, Power, and Area (PPA) while ensuring high yield.<br>
+                Expert in <strong>orchestrating collaboration across multidisciplinary teams (Analog, Layout)</strong> to bridge the gap between theoretical algorithms and silicon reality, delivering ISO26262-compliant automotive IPs and mass-production SoCs on schedule.
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Competencies & Technical Skills</h2>
+            <table class="skills-table">
+                <tr>
+                    <th>Core Architecture</th>
+                    <td>LPDDR5X/5/4X/4 PHY, DDR Controller, DFI 5.1/4.0, Mixed-Signal IP Integration, High-Speed Interface</td>
+                </tr>
+                <tr>
+                    <th>Languages & Scripting</th>
+                    <td><strong>SystemVerilog, Verilog, C/C++, Python, Tcl, Shell Scripting</strong></td>
+                </tr>
+                <tr>
+                    <th>Functional Safety</th>
+                    <td><strong>ISO26262 (ASIL-B)</strong>, FMEDA, Safety Mechanism Architecture (Parity, CRC), Fault Injection</td>
+                </tr>
+                <tr>
+                    <th>Verification & Emulation</th>
+                    <td><strong>Synopsys ZeBu (Emulation)</strong>, <strong>FPGA Prototyping</strong>, UVM (Integration/DPI), SystemVerilog</td>
+                </tr>
+                <tr>
+                    <th>Protocols & Standards</th>
+                    <td>AMBA (AXI, APB, AHB), MIPI, JEDEC Standards, I2C, SPI</td>
+                </tr>
+                <tr>
+                    <th>Implementation & Tools</th>
+                    <td>CDC/RDC Analysis (SpyGlass), UPF (Low Power), Synthesis (DC), STA (PT), Python Automation</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">OPENEDGES Technology</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">Nov 2022 – Present</div>
+                </div>
+                <div class="role">Principal Digital Design Engineer</div>
+                <span class="role-focus">Focus: DDR PHY IP Design (LPDDR5X/4X, 5nm Process) & Silicon Validation</span>
+                <ul>
+                    <li><strong>LPDDR5X PHY Silicon Realization & Optimization:</strong> Led the silicon realization and mass-production optimization of the <strong>Samsung 5nm LPDDR5X PHY(@8533Mbps)</strong>.<br><strong>Collaborated with SI/PI experts</strong> to resolve critical signal integrity bottlenecks in the early design phase, ensuring first-pass silicon success.</li>
+                    <li><strong>Silicon Proven Validation (MPW):</strong> Led the full cycle of <strong>MPW chip fabrication and post-silicon validation</strong>.<br>Designed the <strong>validation PCB platform</strong> and developed bare-metal FW, successfully demonstrating the PHY's physical performance.</li>
+                    <li><strong>Performance Characterization:</strong> Conducted electrical characterization using high-speed measurement equipment.<br>Authored the <strong>final silicon report</strong> that verified signal integrity (SI/PI) margins and JEDEC compliance across PVT corners.</li>
+                    <li><strong>Training Algorithm Optimization (Business Impact):</strong> Identified a critical system availability issue caused by excessive training latency.<br><strong>Initiated and re-architected</strong> the core Training Algorithms (CBT, ReadGate, R/W Eye), <strong>reducing blackout time by 40%</strong>. This <strong>directly secured contracts</strong> with 3 major global customers.</li>
+                    <li><strong>Functional Safety Leadership:</strong> Directed the safety architecture for <strong>ISO26262 ASIL-B compliance</strong>.<br>Designed robust logic paths to detect internal block failures, significantly <strong>maximizing diagnostic coverage (DC)</strong> for high reliability.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">LX Semicon</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">Jan 2019 – Nov 2022</div>
+                </div>
+                <div class="role">Staff Digital Design Engineer</div>
+                <span class="role-focus">Focus: Memory Controller Design (TSMC 22nm LPDDR3/4 @4266Mbps) & Verification</span>
+                <ul>
+                    <li><strong>Memory Controller Architecture:</strong> Led the overall architectural design of high-performance Memory Controllers on the <strong>TSMC 22nm LPDDR3/4(@4266Mbps)</strong>, ensuring robust timing closure and area efficiency.</li>
+                    <li><strong>Scheduler Optimization:</strong> Designed and improved the internal Controller Scheduler logic.<br>Implemented a novel arbitration policy that resulted in a <strong>10% increase in actual bandwidth (Effective BW)</strong> without additional silicon area.</li>
+                    <li><strong>Design Automation:</strong> Championed the adoption of design automation by developing a Python-based CSR generator.<br>This <strong>eliminated integration errors</strong> and reduced the register definition phase from weeks to days.</li>
+                    <li><strong>Verification Environment Scaling:</strong> Built SystemVerilog DPI models for peripherals and ported them into <strong>UVM environments</strong>, enabling seamless co-simulation with verification teams.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">LG Electronics</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">Jan 2014 – Jan 2019</div>
+                </div>
+                <div class="role">Senior Digital Design Engineer</div>
+                <span class="role-focus">Focus: SoC Memory Subsystem & System Validation</span>
+                <ul>
+                    <li><strong>Strategic Simulation (C++):</strong> Developed a <strong>custom C++ AXI-to-DRAM traffic simulator</strong> to overcome RTL simulation speed limits.<br>Predicted performance bottlenecks and optimized arbitration logic months before RTL freeze.</li>
+                    <li><strong>Design for Testability (DFT):</strong> Designed a <strong>Programmable DRAM BIST (Built-In Self-Test)</strong> block.<br>Enabled flexible <strong>at-speed</strong> testing of DRAM read/write patterns during mass production screening.</li>
+                    <li><strong>System-Level Emulation (ZeBu):</strong> Validated system-level performance using the <strong>established Synopsys ZeBu</strong> emulation environment.<br>Loaded full SoC RTL to analyze real-world traffic patterns, resulting in optimized memory bandwidth utilization and reduced system latency.</li>
+                    <li><strong>FPGA Prototyping & Interoperability:</strong> Led <strong>FPGA prototyping</strong> integrating actual physical DRAM modules.<br>Verified DDR Controller read/write integrity and secured interoperability across diverse DRAM vendors by pre-validating vendor-specific features.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">LG Electronics</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">Jan 2010 – Jan 2014</div>
+                </div>
+                <div class="role">Application & Validation Engineer</div>
+                <span class="role-focus">Focus: SoC Application & System Validation</span>
+                <ul>
+                    <li><strong>System-Level Insight:</strong> Enhanced system-level insight through <strong>internal IP verification and customer FAE support</strong>.<br>Validated the interaction between Memory Subsystem, CPU, and Peripherals in a real-world environment, extending expertise beyond simple IP design.</li>
+                    <li><strong>Board-Level Debugging:</strong> Designed <strong>evaluation boards</strong> and conducted hands-on debugging using Oscilloscopes and Logic Analyzers.<br><strong>Troubleshot</strong> and resolved critical physical layer issues (Power integrity, Thermal throttling) that simulation could not catch.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">Inha University</span> <span class="location">| Incheon, Korea</span></div>
+                    <div class="date">2010.02</div>
+                </div>
+                <div>Master's degree in Electronics Engineering</div>
+            </div>
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">Inha University</span> <span class="location">| Incheon, Korea</span></div>
+                    <div class="date">2008.02</div>
+                </div>
+                <div>Bachelor's degree in Electronics Engineering</div>
+            </div>
+        </section>
+    </div>
+
+    <div class="lang-kr">
+        <section>
+            <h2>엔지니어링 철학 (Engineering Philosophy)</h2>
+            <div class="philosophy-block">
+                <span class="philosophy-title">"복잡성은 신뢰성의 적이다 (Complexity is the Enemy of Reliability)"</span>
+                <p>나노미터 공정의 반도체 세계에서, 저는 <strong>'설계의 본질주의(Architectural Essentialism)'</strong>를 지향합니다.<br>견고함은 불필요한 것을 덜어내는 것에서부터 <strong>시작된다고 생각합니다.</strong></p>
+                <ul class="philosophy-list">
+                    <li><strong>안전을 위한 미니멀리즘:</strong> 과도하게 복잡한 "Combo" 설계는 잠재적인 오류의 원인이 됩니다.<br>저는 분명한 목적을 가지는 각 모듈로 구성된 간결한 아키텍처를 지향하며, 이는 <strong>ISO26262 (ASIL)</strong>가 요구하는 결정론적 동작(Deterministic behavior)을 이끌어내는 <strong>기반이 된다고 생각합니다.</strong></li>
+                    <li><strong>실리콘을 이해하는 설계:</strong> 코드는 결국 전기 신호로 구현되며, 특히 Mixed-Signal IP는 시뮬레이션만으로는 한계가 있습니다.<br>즉, Analog의 특성을 잘 이해하고 이를 상호 보완하는 Digital Logic을 설계해야 완성도 높은 IP가 <strong>완성된다고 여깁니다.</strong></li>
+                    <li><strong>덜어냄을 통한 최적화:</strong> 가장 효율적인 저전력 설계는 기능을 추가하는 것이 아니라, 불필요한 오버헤드를 제거하는 데서 나옵니다.<br>아키텍처의 비효율적인 부분을 제거하여 성능 저하 없는 전력 효율을 <strong>달성할 수 있다고 봅니다.</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>전문 요약 (Professional Summary)</h2>
+            <div class="summary-text">
+                복잡한 시스템 요구사항을 고성능 실리콘 솔루션(5nm LPDDR5X/4X)으로 구현하는 데 <strong>14년 이상의 경력</strong>을 보유한 <strong>전략적 수석 디지털 설계 엔지니어(Principal Engineer)</strong>입니다.<br>
+                PPA(Performance, Power, Area) 최적화와 수율 확보를 위한 <strong>기술적 문제 해결과 성능 최적화</strong>를 주도해 왔습니다.<br>
+                특히 Mixed-Signal IP를 완성하기 위해 <strong>아날로그 및 레이아웃 등 각 분야 전문가들과 필수적인 협업을 주도</strong>하였으며, 이를 통해 <strong>이론적 알고리즘과 실제 실리콘 간의 간극을 좁히며</strong> ISO26262 준수 차량용 IP 및 양산형 SoC 성공에 기여했습니다.
+            </div>
+        </section>
+
+        <section>
+            <h2>핵심 역량 및 기술 (Technical Skills)</h2>
+            <table class="skills-table">
+                <tr>
+                    <th>Core Architecture</th>
+                    <td>LPDDR5X/5/4X/4 PHY, DDR Controller, DFI 5.1/4.0, Mixed-Signal IP Integration, High-Speed Interface</td>
+                </tr>
+                <tr>
+                    <th>Languages & Scripting</th>
+                    <td><strong>SystemVerilog, Verilog, C/C++, Python, Tcl, Shell Scripting</strong></td>
+                </tr>
+                <tr>
+                    <th>Functional Safety</th>
+                    <td><strong>ISO26262 (ASIL-B)</strong>, FMEDA, Safety Mechanism Architecture (Parity, CRC), Fault Injection</td>
+                </tr>
+                <tr>
+                    <th>Verification & Emulation</th>
+                    <td><strong>Synopsys ZeBu (Emulation)</strong>, <strong>FPGA Prototyping</strong>, UVM (Integration/DPI), SystemVerilog</td>
+                </tr>
+                <tr>
+                    <th>Protocols & Standards</th>
+                    <td>AMBA (AXI, APB, AHB), MIPI, JEDEC Standards, I2C, SPI</td>
+                </tr>
+                <tr>
+                    <th>Implementation & Tools</th>
+                    <td>CDC/RDC Analysis (SpyGlass), UPF (Low Power), Synthesis (DC), STA (PT), Python Automation</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>경력 사항 (Professional Experience)</h2>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">OPENEDGES Technology</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">2022.11 – 현재</div>
+                </div>
+                <div class="role">수석 디지털 설계 엔지니어 (Principal Digital Design Engineer)</div>
+                <span class="role-focus">주요 업무: DDR PHY IP 설계 (LPDDR5X/4X, 5nm 공정) 및 실리콘 검증</span>
+                <ul>
+                    <li><strong>LPDDR5X PHY 실리콘 구현 및 양산 최적화:</strong> <strong>Samsung 5nm LPDDR5X PHY(@8533Mbps)</strong>의 실리콘 구현(Silicon Realization) 및 양산 최적화를 주도.<br><strong>SI/PI 전문가와의 긴밀한 협업</strong>을 통해 설계 초기 단계에서 신호 무결성 병목 현상을 해결하여 <strong>first-pass silicon success 달성.</strong></li>
+                    <li><strong>MPW 칩 제작 및 실리콘 검증 총괄:</strong> <strong>MPW 칩 제작 및 Post-silicon 검증</strong>의 전 과정을 주도함.<br><strong>검증용 PCB 플랫폼을 직접 설계</strong>하고 Bare-metal 펌웨어를 개발하여 PHY의 물리적 성능을 입증.</li>
+                    <li><strong>성능 리포트 및 SI/PI 특성 분석:</strong> 고속 측정 장비를 활용하여 전기적 특성(Electrical Characterization)을 분석.<br>PVT 코너별 신호 무결성(SI/PI) 마진과 JEDEC 규격 준수를 검증하는 <strong>최종 실리콘 리포트 작성.</strong></li>
+                    <li><strong>트레이닝 알고리즘 최적화:</strong> 시스템 가용성 문제를 해결하기 위해 핵심 트레이닝 알고리즘(CBT, ReadGate, R/W Eye)을 <strong>재설계</strong>하여 <strong>Blackout 시간을 40% 단축.</strong><br>엄격한 QoS 요구사항을 충족시켜 3개 글로벌 고객사 <strong>계약 수주에 직접 기여.</strong></li>
+                    <li><strong>기능 안전(Functional Safety) 리더십:</strong> <strong>ISO26262 ASIL-B</strong> 인증을 위한 안전 아키텍처 수립.<br>내부 블록의 고장을 정밀하게 검출할 수 있도록 로직 및 경로를 재설계하여, <strong>진단 커버리지(Diagnostic Coverage)를 극대화함.</strong></li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">LX Semicon</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">2019.01 – 2022.11</div>
+                </div>
+                <div class="role">선임 디지털 설계 엔지니어 (Staff Digital Design Engineer)</div>
+                <span class="role-focus">주요 업무: 메모리 컨트롤러 설계 (TSMC 22nm LPDDR3/4 @4266Mbps) 및 검증</span>
+                <ul>
+                    <li><strong>메모리 컨트롤러 전체 구조 설계:</strong> <strong>TSMC 22nm LPDDR3/4(@4266Mbps)</strong> 메모리 컨트롤러의 아키텍처 설계를 주도.<br>타이밍 마진 확보 및 면적 효율성을 극대화한 구조를 정의 및 구현.</li>
+                    <li><strong>스케줄러 설계 및 최적화:</strong> 컨트롤러 내부의 핵심 스케줄러 로직을 설계 및 개선.<br>새로운 중재(Arbitration) 정책을 적용하여, 면적 증가 없이 <strong>실효 대역폭(Actual BW)을 10% 향상</strong>시키는 성과 달성.</li>
+                    <li><strong>설계 자동화 (생산성 향상):</strong> Python 기반 CSR 생성기를 개발하여 수동 레지스터 통합의 휴먼 에러를 제거하고, 작업 시간을 수주에서 며칠로 <strong>단축.</strong></li>
+                    <li><strong>검증 환경 확장:</strong> SystemVerilog DPI 모델을 구축하고 이를 <strong>UVM 환경</strong>으로 포팅하여 검증 팀과의 원활한 공동 시뮬레이션 환경 구축.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">LG Electronics</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">2014.01 – 2019.01</div>
+                </div>
+                <div class="role">선임 디지털 설계 엔지니어 (Senior Digital Design Engineer)</div>
+                <span class="role-focus">주요 업무: SoC 메모리 서브시스템 및 트래픽 시뮬레이션</span>
+                <ul>
+                    <li><strong>전략적 시뮬레이션 (C++):</strong> RTL 시뮬레이션 속도 한계를 극복하기 위해 <strong>커스텀 C++ AXI-to-DRAM 트래픽 시뮬레이터</strong>를 자체 제작.<br>RTL 확정 수개월 전 성능 병목을 예측하고 중재 로직(Arbitration Logic)을 최적화.</li>
+                    <li><strong>Design for Testability (DFT):</strong> <strong>Programmable DRAM BIST</strong> 블록을 설계.<br>양산 스크리닝 과정에서 DRAM의 Read/Write 패턴을 유연하게 At-speed로 테스트할 수 있는 환경 구축.</li>
+                    <li><strong>System-Level Emulation (ZeBu):</strong> <strong>구축된 Synopsys ZeBu 에뮬레이션 환경</strong>에서 시스템 레벨 검증 수행.<br>전체 SoC RTL을 탑재하여 실제 트래픽 패턴을 분석하고, 이를 통해 <strong>메모리 대역폭 최적화 및 시스템 레이턴시 개선.</strong></li>
+                    <li><strong>FPGA Prototyping & 상호운용성 확보:</strong> 실제 DRAM 모듈을 연동한 <strong>FPGA 프로토타이핑</strong>을 주도.<br>Tape-out 이전에 벤더별 고유 기능(Vendor-specific features)을 사전 검증하여 컨트롤러의 정합성을 확보하고 <strong>다양한 DRAM 벤더와의 상호운용성 보장.</strong></li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">LG Electronics</span> <span class="location">| Seoul, Korea</span></div>
+                    <div class="date">2010.01 – 2014.01</div>
+                </div>
+                <div class="role">어플리케이션 & 검증 엔지니어 (Application & Validation Engineer)</div>
+                <span class="role-focus">주요 업무: SoC 어플리케이션 및 시스템 검증</span>
+                <ul>
+                    <li><strong>시스템 레벨 통찰력 (System-Level Insight):</strong> <strong>내부 IP 검증 및 고객사 FAE 지원</strong> 업무를 통해 SoC 전체 시스템 아키텍처에 대한 통찰력을 함양.<br>단순 IP 설계를 넘어 실제 환경에서 메모리 서브시스템, CPU, 주변 장치 간의 상호작용을 검증.</li>
+                    <li><strong>Board-Level Debugging:</strong> <strong>평가 보드(Evaluation Board)를 직접 설계</strong>하고 오실로스코프 및 로직 분석기를 활용한 실습 디버깅 수행.<br>시뮬레이션에서 잡히지 않는 전원 무결성(Power Integrity) 및 발열 제어(Thermal Throttling) 이슈를 해결.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>학력 (Education)</h2>
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">인하대학교</span> <span class="location">| 인천</span></div>
+                    <div class="date">2010.02</div>
+                </div>
+                <div>전자공학 석사</div>
+            </div>
+            <div class="job-entry">
+                <div class="job-header">
+                    <div><span class="company">인하대학교</span> <span class="location">| 인천</span></div>
+                    <div class="date">2008.02</div>
+                </div>
+                <div>전자공학 학사</div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-updated">
+        Last updated: <span id="last-updated">Loading...</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // [1] 기능 정의: 버튼 동작을 위한 함수들
+            const btnLang = document.getElementById('btn-lang');
+            const btnTheme = document.getElementById('btn-theme');
+            
+            // 언어 변경 (버튼 리스너 연결)
+            if (btnLang) {
+                btnLang.addEventListener('click', function() {
+                    document.body.classList.toggle('show-kr');
+                });
+            }
+
+            // 테마 변경 (안전장치 포함)
+            if (btnTheme) {
+                btnTheme.addEventListener('click', function() {
+                    const body = document.body;
+                    const isDark = body.classList.toggle('dark-mode');
+                    try {
+                        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                    } catch (e) {
+                        console.log("Local Storage access denied.");
+                    }
+                });
+            }
+
+            // 초기 테마 로딩
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.body.classList.add('dark-mode');
+                }
+            } catch (e) {
+                console.log("Theme loading skipped.");
+            }
+
+            // [2] GitHub API 기능: 날짜 가져오기 (비동기)
+            const repo = 'ZionSeo81/ZionSeo81.github.io'; // 대소문자 정확히
+            const dateSpan = document.getElementById('last-updated');
+            
+            if (dateSpan) {
+                fetch(`https://api.github.com/repos/${repo}/commits?per_page=1`)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response error');
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (Array.isArray(data) && data.length > 0 && data[0].commit) {
+                            const dateStr = data[0].commit.author.date;
+                            const dateObj = new Date(dateStr);
+                            const formattedDate = dateObj.toISOString().split('T')[0];
+                            dateSpan.textContent = formattedDate;
+                        } else {
+                            throw new Error('Data format error');
+                        }
+                    })
+                    .catch(error => {
+                        console.warn('GitHub API failed:', error);
+                        // [변경됨] 에러 발생 시 "Fail" 표시
+                        dateSpan.textContent = "Fail";
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
